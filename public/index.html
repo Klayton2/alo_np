@@ -1,24 +1,48 @@
 <!DOCTYPE html> 
 <html lang="pt-br"> 
-    <head> 
-        <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Alô NP</title> <link rel="stylesheet" href="style/style.css"> 
-        <!-- Leaflet --> 
-         <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/> 
-        <!-- Leaflet fim-->
-    </head> 
-    <body> 
-        <h1>Alô NP</h1>
-         <div class="form"> 
-            <textarea id="descricao" placeholder="Descreva o problema..."></textarea> 
-            <input type="file" id="foto"> 
-            <button id="btn-enviar">Enviar</button>
-         </div> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Alô NP</title> 
 
-         <div id="map"></div> 
+    <link rel="stylesheet" href="style/style.css"> 
 
-         <!--Leaflet--> 
-         <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script> 
+    <!-- Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
 
-         <script src="script/script.js"></script> 
-    </body> 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="shortcut icon" href="imagens/favicon.png" type="image/x-icon">
+</head> 
+
+<body> 
+
+<h1>Alô NP</h1>
+
+<div class="form"> 
+    <textarea id="descricao" placeholder="Descreva o problema..."></textarea> 
+    <input type="file" id="foto"> 
+    <button id="btn-enviar">Enviar</button>
+</div> 
+
+<div class="pesquisa">
+    <input type="text" id="endereco" placeholder="Digite o endereço...">
+    <button id="btn-buscar">Buscar</button>
+</div>
+
+<div id="map"></div> 
+
+<!-- Firebase -->
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js"></script>
+
+<!-- Leaflet -->
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<script src="script/script.js"></script>
+
+</body> 
 </html>
